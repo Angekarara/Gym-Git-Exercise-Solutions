@@ -834,3 +834,84 @@ To github.com:Angekarara/Gym-Git-Exercise-Solutions.git
    78e6b63..6f2b68b  main -> main
 
 ```
+
+### Exercise 2
+
+```bash
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (ft/footer)
+$ git add about.html
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (ft/footer)
+$ git commit -m "about changes"
+[ft/footer 8efe3e6] about changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (ft/footer)
+$ git add about.html
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (ft/footer)
+$ git commit -m "about changes"
+[ft/footer 0302b40] about changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (ft/footer)
+$ git push origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 546 bytes | 273.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Angekarara/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To github.com:Angekarara/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git merge --squash ft/footer
+Updating 6886736..0302b40
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 712f1b8] footer changes squashing
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Angekarara/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To github.com:Angekarara/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
