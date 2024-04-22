@@ -915,3 +915,74 @@ remote:
 To github.com:Angekarara/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/squashing -> ft/squashing
 ```
+
+## Bundle 5
+
+### Exercise 1
+
+```bash
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    home.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git add index.html
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    home.html
+
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git add home.html
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    home.html -> index.html
+
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git commit -m "new changes"
+[main 464fd39] new changes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename home.html => index.html (100%)
+
+Ange@amica MINGW64 ~/Gym-Git-Exercise-Solutions (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 229 bytes | 229.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Angekarara/Gym-Git-Exercise-Solutions.git
+   a9f65b9..464fd39  main -> main
+```
